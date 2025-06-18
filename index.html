@@ -1,0 +1,148 @@
+<style>
+    /* Popup fullscreen */
+    #popup-chat {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  
+    .popup-content {
+      background: #121212;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      width: 95%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  
+    /* Header */
+    .popup-header {
+      background: linear-gradient(90deg, #333, #222);
+      color: #fff;
+      padding: 24px 20px 10px;
+      text-align: center;
+    }
+  
+    .popup-header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+  
+    .popup-header p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      color: #cccccc;
+    }
+  
+    /* Body */
+    .popup-body {
+      padding: 20px;
+      background: #1e1e1e;
+      color: #e0e0e0;
+    }
+  
+    .popup-body textarea {
+      width: 100%;
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid #444;
+      resize: vertical;
+      min-height: 100px;
+      font-size: 14px;
+      background: #2c2c2c;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+      outline: none;
+      transition: border 0.2s ease;
+    }
+  
+    .popup-body textarea:focus {
+      border-color: #28a745;
+    }
+  
+    .popup-body button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .popup-body button:hover {
+      background-color: #218838;
+    }
+  
+    /* Footer */
+    .popup-footer {
+      background: #191919;
+      padding: 16px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      border-top: 1px solid #2a2a2a;
+    }
+  
+    .popup-footer .social-links {
+      margin: 10px 0;
+    }
+  
+    .popup-footer .social-links a {
+      color: #aaa;
+      margin: 0 8px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+  
+    .popup-footer .social-links a:hover {
+      color: #28a745;
+    }
+  </style>
+  
+  <!-- Popup -->
+  <div id="popup-chat">
+    <div class="popup-content">
+      <!-- Header -->
+      <div class="popup-header">
+        <h1>WELCOME TO TEXT2 MAIL</h1>
+        <p></p>
+      </div>
+  
+      <!-- Body -->
+      <div class="popup-body">
+        <form action="https://formsubmit.co/truytimkienthuctv@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://text2.click">
+  
+          <textarea name="message" placeholder="Send us here..." required></textarea>
+          <button type="submit">Send email</button>
+        </form>
+      </div>
+  
+      <!-- Footer -->
+      <div class="popup-footer">
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank">Facebook</a> • 
+          <a href="https://youtube.com" target="_blank">YouTube</a> • 
+          <a href="https://text2.click" target="_blank">homepage</a>
+        </div>
+        <div>© 2025 Text2 Company . All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    window.addEventListener('load', function () {
+      document.getElementById('popup-chat').style.display = 'flex';
+    });
+  </script>
+  
