@@ -1,166 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mail Text2 </title>
-
-  <!-- SEO cơ bản -->
-  <meta name="description" content="Mail of text2">
-  <meta name="keywords" content="Text2, Mail, Company text2">
-  <meta name="author" content="Text2 "> 
-<!-- Google tag (gtag.js) - GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6J85STMJ14');
-</script>
-<style>
-    /* Popup fullscreen */
-    #popup-chat {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      font-family: 'Segoe UI', sans-serif;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mail Text2</title>
+  <style>
+    h1 {
+      text-align: center;
+      margin: 35px 0 20px 0 !important;
     }
-  
-    .popup-content {
-      background: #121212;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-      width: 95%;
+
+    .container {
       max-width: 600px;
+      margin: auto;
+      padding: 0 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-row {
       display: flex;
-      flex-direction: column;
-      overflow: hidden;
+      gap: 10px;
     }
-  
-    /* Header */
-    .popup-header {
-      background: linear-gradient(90deg, #333, #222);
-      color: #fff;
-      padding: 24px 20px 10px;
-      text-align: center;
+
+    .form-row .col {
+      flex: 1;
     }
-  
-    .popup-header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-  
-    .popup-header p {
-      margin: 8px 0 0;
-      font-size: 14px;
-      color: #cccccc;
-    }
-  
-    /* Body */
-    .popup-body {
-      padding: 20px;
-      background: #1e1e1e;
-      color: #e0e0e0;
-    }
-  
-    .popup-body textarea {
+
+    .form-control {
       width: 100%;
-      border-radius: 12px;
-      padding: 12px;
-      border: 1px solid #444;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea.form-control {
       resize: vertical;
-      min-height: 100px;
-      font-size: 14px;
-      background: #2c2c2c;
-      color: #e0e0e0;
-      margin-bottom: 20px;
-      outline: none;
-      transition: border 0.2s ease;
     }
-  
-    .popup-body textarea:focus {
-      border-color: #28a745;
-    }
-  
-    .popup-body button {
-      background-color: #28a745;
-      color: white;
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #000;
+      color: #fff;
       border: none;
-      padding: 10px 20px;
-      border-radius: 10px;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 15px;
-      transition: background-color 0.3s ease;
     }
-  
-    .popup-body button:hover {
-      background-color: #218838;
-    }
-  
-    /* Footer */
-    .popup-footer {
-      background: #191919;
-      padding: 16px 20px;
-      text-align: center;
-      font-size: 13px;
-      color: #aaa;
-      border-top: 1px solid #2a2a2a;
-    }
-  
-    .popup-footer .social-links {
-      margin: 10px 0;
-    }
-  
-    .popup-footer .social-links a {
-      color: #aaa;
-      margin: 0 8px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-  
-    .popup-footer .social-links a:hover {
-      color: #28a745;
+
+    .btn:hover {
+      background-color: #333;
     }
   </style>
-  
-  <!-- Popup -->
-  <div id="popup-chat">
-    <div class="popup-content">
-      <!-- Header -->
-      <div class="popup-header">
-        <h1>WELCOME TO TEXT2 MAIL</h1>
-        <p></p>
-      </div>
-  
-      <!-- Body -->
-      <div class="popup-body">
-        <form action="https://formsubmit.co/text2team@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://text2.click">
-  
-          <textarea name="message" placeholder="Send us here..." required></textarea>
-          <button type="submit">Send email</button>
-        </form>
-      </div>
-  
-      <!-- Footer -->
-      <div class="popup-footer">
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank">Facebook</a> • 
-          <a href="https://youtube.com" target="_blank">YouTube</a> • 
-          <a href="https://text2.click" target="_blank">homepage</a>
+</head>
+<body>
+  <div class="container">
+    <h1>Text2 Mail</h1>
+    <form target="_blank" action="https://formsubmit.co/text2team@gmail.com" method="POST">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="col">
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+          </div>
         </div>
-        <div>© 2025 Text2 Company . All rights reserved.</div>
       </div>
-    </div>
+      <div class="form-group">
+        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Now</button>
+    </form>
   </div>
-  
-  <script>
-    window.addEventListener('load', function () {
-      document.getElementById('popup-chat').style.display = 'flex';
-    });
-  </script>
-  
+</body>
+</html>
